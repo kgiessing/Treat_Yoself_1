@@ -19,12 +19,12 @@ public class Third_P_Cam : MonoBehaviour
     }
     
     // LateUpdate is called after Update functions have been called
-    private void LateUpdate()
+    /*private void LateUpdate()
     {
         CamControl();
     }
 
-   /* void CamControl()
+   void CamControl()
     {
         mouseX += Input.GetAxis("Mouse X") * _rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * _rotationSpeed;
@@ -49,5 +49,5 @@ public class Third_P_Cam : MonoBehaviour
             
             _sprinkle.getDirection(mouseX);
         }
-    */}
+    } */
 }

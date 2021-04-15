@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         //TODO cam spins because it targets the player! FIX THIS
-        transform.Rotate(Vector3.right * _spinSpeed * Time.deltaTime);
+        //transform.Rotate(Vector3.right * _spinSpeed * Time.deltaTime);
         PlayerMovement();
         PlayerJump();
         PlayerShoot();
