@@ -24,7 +24,7 @@ public class Third_P_Cam : MonoBehaviour
         CamControl();
     }
 
-    void CamControl()
+   /* void CamControl()
     {
         mouseX += Input.GetAxis("Mouse X") * _rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * _rotationSpeed;
@@ -49,5 +49,5 @@ public class Third_P_Cam : MonoBehaviour
             
             _sprinkle.getDirection(mouseX);
         }
-    }
+    */}
 }
