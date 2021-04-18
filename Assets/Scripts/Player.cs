@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
@@ -22,15 +23,15 @@ public class Player : MonoBehaviour
         PlayerMovement();
         PlayerJump();
         PlayerShoot();
-        // Rotate();
+        //Rotate();
         
     }
 
-    /*public void Rotate()
+    public void Rotate()
     {
-        transform.Rotate(30f, 0f, 0f, Space.Self);
+        transform.Rotate(1f, 0f, 0f, Space.Self);
     }
-    */
+    
     void PlayerMovement()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour
             isGrounded = false;
         }
     }
-
+    
     void PlayerShoot()
     {
         if(Input.GetKey(KeyCode.Mouse0) && Time.time > _timeToShoot)
@@ -77,6 +78,8 @@ public class Player : MonoBehaviour
             _timeToShoot = Time.time + _shootRate;
             Instantiate(sprinklePrefab,
                 transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
+
         }
     }
+
 }

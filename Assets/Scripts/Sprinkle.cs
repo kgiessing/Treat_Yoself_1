@@ -18,14 +18,15 @@ public class Sprinkle : MonoBehaviour
     {
         // to shoot in the direction, where the player is looking (rotation of donut)
         // when mouse moves, donut moves
-        
+
+        transform.Rotate(forwardedVector);
         transform.Translate(forwardedVector * _sprinkleSpeed * Time.deltaTime);
-        
-        /*if (transform.position.x > 10f)
+
+        if (transform.position.x > 70f || transform.position.z > 70f)
         {
             Destroy(this.gameObject);
         }
-    */}
+    }
 
     public void getDirection(float playerRotationTwo)
     {

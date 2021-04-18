@@ -11,15 +11,17 @@ public class Third_P_Cam : MonoBehaviour
 
     [SerializeField] private Sprinkle _sprinkle;
 
-    void Start()
+    // TODO DECOMMENT IN FINAL VERSION
+    /*void Start()
     {
         // make cursor invisible and locked to middle of screen
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+    */
     
     // LateUpdate is called after Update functions have been called
-    /*private void LateUpdate()
+    private void LateUpdate()
     {
         CamControl();
     }
@@ -29,25 +31,25 @@ public class Third_P_Cam : MonoBehaviour
         mouseX += Input.GetAxis("Mouse X") * _rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * _rotationSpeed;
         // prevents cam from flipping around
-        mouseY = Mathf.Clamp(mouseY, -35, 60);
+        mouseY = Mathf.Clamp(mouseY, -35f, 30f);
         
         // keep cam focused on target
         mouseY -= Input.GetAxis("Mouse Y") * _rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, 5, 60);
+        mouseY = Mathf.Clamp(mouseY, 5f, 60f);
         transform.LookAt(Target);
 
         // only move camera when LeftShift is pressed
         // otherwise move both cam and player
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
+            Target.rotation = Quaternion.Euler(mouseY, mouseX, 0f);
         }
         else
         {
-            Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-            Player.rotation = Quaternion.Euler(0, mouseX, 0);
+            Target.rotation = Quaternion.Euler(mouseY, mouseX, 0f);
+            Player.rotation = Quaternion.Euler(0f, mouseX, 0f);
             
             _sprinkle.getDirection(mouseX);
         }
-    } */
+    } 
 }
